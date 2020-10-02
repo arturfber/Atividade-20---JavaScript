@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Jogo da Memória </title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    
+</head>
+<body>
+    <div class="container">
+        <p id="copas" onclick="document.getElementById('copas').style.backgroundColor = 'red'" > Copas </p>
+        
+        <p id="espadas" onclick="document.getElementById('espadas').style.backgroundColor = '#FFFFFF'" > Espadas </p>
+        
+        <p id="ouros" onclick="document.getElementById('ouros').style.backgroundColor = 'yellow'"> Ouros </p>
+       
+      
+    <div class="start">
+        <h1 onclick="start()"> COMEÇAR </h1>
+    </div>
+
+    <div class="fim">
+        <h1 onclick="fim()"> VERIFICAR </h1>
+    </div>
+
+    </div>
+
+    
+
+</body> 
+
+<script>
+
+    function start(){
+        document.getElementById('copas').innerHTML = ''
+        document.getElementById('espadas').innerHTML = ''
+        document.getElementById('ouros').innerHTML = ''
+    }
+
+   function fim(){
+
+       if((document.getElementById('copas').style.backgroundColor == 'red' ) && (document.getElementById('espadas').style.backgroundColor == '#FFFFFF' ) && (document.getElementById('ouros').style.backgroundColor == 'yellow' ))
+       {
+            alert('Correto!')
+       }
+
+       else{
+            alert('Errado!')
+       }
+   }
+</script>
+</html>
